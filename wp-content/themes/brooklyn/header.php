@@ -17,7 +17,9 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <?php ut_meta_hook(); //action hook, see inc/ut-theme-hooks.php ?>
     
         
@@ -87,7 +89,15 @@
 	<![endif]--> 
     	
     <?php wp_head(); ?>
-    
+<script>
+$.noConflict();
+jQuery(function($){
+        
+		if($("div.wpcf7-mail-sent-ok").length){
+     		$("div.wpcf7-mail-sent-ok").slideUp(1000);
+}
+});
+</script>
 </head>
 
 <?php 
